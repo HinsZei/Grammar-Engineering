@@ -1,0 +1,29 @@
+S -> NP VP | Wh Aux S | Wh S | NP VP S
+NP -> ProperNoun | NP CONJ | Nominal
+Nominal -> Noun | Det Nominal | ADJ Nominal | Nominal PP
+VP -> VP ARG
+VP -> V | ADV V
+ARG -> NP
+
+CONJ -> Conj NP
+ADJ -> AdJ Adj | Adj
+PP -> Prep Det Noun | Prep Noun
+
+
+V -> 'served' | 'serve' | 'serves'
+V -> 'giggles'|'giggled'
+V -> 'drank' | 'drinks' |'drink'
+V ->  'wears' | 'wear'
+V ->  'thinks'
+V ->  'puts'
+
+ADV -> 'always' | 'never'
+# Preposition
+Prep -> 'in' | 'after'
+ProperNoun -> 'Lisa' | 'Bart' | 'Homer'
+Wh -> 'when'
+Aux -> 'does' | 'do'
+Det -> 'a' | 'the'
+Adj -> 'blue' | 'healthy' | 'green'
+Conj -> 'and'
+Noun -> 'milk' | 'shoes' | 'salad' |'kitchen'| 'lunch'
