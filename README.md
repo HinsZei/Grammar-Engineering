@@ -1,13 +1,12 @@
 # Grammar Engineering
- The purpose of this assignment is to make you familiar with specifications of syntax. You will be engineering a grammar for a small subset of English. For your convenience, this task is broken up into steps. At first, the grammar will be a pure context-free grammar and later this will be refined to become a feature (or ‘unification’) grammar. As in the first practical, we will be using NLTK with Python3.
 
- This project is to engineer a grammar of a small subset of English using NLTK with Python3. It contains a pure context-free grammar(P2C.cfg) and also a feature(unification) grammar(P2.cfg).
+ This project is to engineer a grammar of a small subset of English using NLTK with Python3. It contains a pure context-free grammar(P2C.cfg) and also a   feature(unification) grammar(P2.cfg).
 
  p2.py is a small programme that compiles a parser, which applies on two files, p2.pos and p2.neg, one with positive exapmples and one with negative examples
 
 ## Lexicon and Context-free Grammar
 
- To implement context-free grammar for positive examples, some parts of speech(POS) are introduced to represent the grammar rules in English, like Det, Prep, Adj, etc.. The answer,is definitely able to parse all sentences in p2.pos but also some sentences p2.neg, so there are still several drawbacks. 
+ To implement context-free grammar for positive examples, some parts of speech(POS) are introduced to represent the grammar rules in English, like Det, Prep,  Adj, etc.. The answer,is definitely able to parse all sentences in p2.pos but also some sentences p2.neg, so there are still several drawbacks. 
  1. it can not distinguish between singular and plural nous, neither nor between various verb forms.
  2. ambiguity is unavoidable, since some words can be treated as different POS. for example, 'in the kitchen' is once an adjunct and once is an argument.
 
