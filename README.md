@@ -20,7 +20,7 @@ VP[Sub = ?arg] -> V[Sub = ?arg]
 
 the 'Sub' must keep consistent, no matter how it is named. Based on this, the idea is specific in the report.
 
-## Reflection##
+## Reflection
 
 Since my poor English, there are issues in both grammars, I list them here and I will restore it when I am free(will I?).
 
