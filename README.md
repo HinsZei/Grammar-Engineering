@@ -11,7 +11,7 @@
  1. it can not distinguish between singular and plural nous, neither nor between various verb forms.
  2. ambiguity is unavoidable, since some words can be treated as different POS. for example, 'in the kitchen' is once an adjunct and once is an argument.
 
-## Subcategorisation and Feature Grammar##
+## Subcategorisation and Feature Grammar
 
 To solve the above issues, the Feature Grammar introduces number agreement and subcategorisation, as well as tense for this simple example.
 The parse rulse is like, for grammar:
