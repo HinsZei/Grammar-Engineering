@@ -5,7 +5,7 @@
 
  p2.py is a small programme that compiles a parser, which applies on two files, p2.pos and p2.neg, one with positive exapmples and one with negative examples
 
-## Lexicon and Context-free Grammar ##
+## Lexicon and Context-free Grammar
 
  To implement context-free grammar for positive examples, some parts of speech(POS) are introduced to represent the grammar rules in English, like Det, Prep, Adj, etc.. The answer,is definitely able to parse all sentences in p2.pos but also some sentences p2.neg, so there are still several drawbacks. 
  1. it can not distinguish between singular and plural nous, neither nor between various verb forms.
