@@ -7,7 +7,7 @@ ARG -> NP
 
 CONJ -> Conj NP
 ADJ -> AdJ Adj | Adj
-PP -> Prep Det Noun | Prep Noun
+PP -> Prep NP
 
 
 V -> 'served' | 'serve' | 'serves'

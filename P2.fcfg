@@ -5,13 +5,14 @@ S ->  Wh NP[NUM=?n]  Aux[NUM=?n] NP VP[NUM=pl, TENSE=present, SUBCAT=nil]
 S -> Wh SUBS
 SUBS -> NP[NUM=?n] VP[NUM=?n, TENSE=?t, SUBCAT=subsentence] S
 # NP part
-NP[NUM=?n] -> ProperNoun[NUM=?n] | Nominal
+NP[NUM=?n] -> ProperNoun[NUM=?n] | Nominal[NUM=?n] | Det[NUM=?n] Nominal[NUM=?n]
 NP[NUM=pl] -> NP CONJ
-Nominal[NUM=?n] -> Noun[NUM=?n] | Adj Nominal[NUM=?n] | Det[NUM=?n] Nominal[NUM=?n] | Nominal[NUM=?n] PP
+Nominal[NUM=?n] -> Noun[NUM=?n] | Adj Nominal[NUM=?n] | Nominal[NUM=?n] PP
 # VP and arguments
 VP[NUM=?n, TENSE=?t, SUBCAT=?rest] -> VP[NUM=?n, TENSE=?t, SUBCAT=[HEAD=?arg, TAIL=?rest]] ARG[CAT=?arg]
 VP[NUM=?n, TENSE=?t, SUBCAT=?args] -> V[NUM=?n, TENSE=?t, SUBCAT=?args]
 VP[NUM=?n, TENSE=?t, SUBCAT=?args] -> ADV[VTENSE = ?t] VP[NUM=?n, TENSE=?t, SUBCAT=?args]
+VP[SUBCAT=nil] -> VP[SUBCAT=nil] PP
 # following 3 rules is for 'may not have'
 VP[NUM=?n, TENSE=?t, SUBCAT=?args] -> AUX[VTENSE = ?t] VP[NUM=?n, TENSE=?t, SUBCAT=?args]
 AUX[TENSE = ?t,VTENSE = ?v] -> Aux[TENSE = ?t,VTENSE = ?v] | AUX[TENSE = ?t,VTENSE = ?v] Not
@@ -24,11 +25,11 @@ ARG[CAT = Gerund] -> Gerund
 CONJ -> Conj NP
 PP -> Prep Det Noun | Prep Noun
 
-V[TENSE = present, NUM = sg, SUBCAT = [ HEAD= np,TAIL = nil ]]-> 'serves' | 'wears' |'drinks'
+V[TENSE = present, NUM = sg, SUBCAT = [ HEAD= np,TAIL = nil ]]-> 'serves' | 'wears' |'drinks' | 'drink'
 V[TENSE = past, NUM = ?n, SUBCAT = [ HEAD= np,TAIL = nil ]] -> 'served' | 'drank'
 V[TENSE = present, NUM = pl, SUBCAT = [ HEAD= np,TAIL = nil ]]-> 'serve' | 'wear'
 V[TENSE = present, NUM = sg, SUBCAT = [HEAD = np,TAIL = [HEAD = np, TAIL = nil]]]-> 'serves'
-V[TENSE = present, NUM = pl, SUBCAT = [ HEAD= np,TAIL = [HEAD = pp, TAIL = nil]]]-> 'drink'
+# V[TENSE = present, NUM = pl, SUBCAT = [ HEAD= np,TAIL = [HEAD = pp, TAIL = nil]]]-> 'drink'
 V[TENSE = present, NUM = sg, SUBCAT = [ HEAD= np,TAIL = [HEAD = pp, TAIL = nil]]]-> 'puts'
 V[TENSE = past, NUM = ?n, SUBCAT = nil]-> 'giggled'
 V[TENSE = present, NUM = sg, SUBCAT = nil]-> 'giggles'
